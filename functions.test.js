@@ -39,3 +39,14 @@ test("'test! 123' should return 'O NOfjWXY' if using a shift of 36", () => {
 test("'O NOfjWXY' should return 'test! 123' if using a shift of -36", () => {
   expect(functions.caesarCipher("O NOfjWXY", -36)).toMatch(/^test! 123$/);
 })
+
+testObject = {
+  average: 4,
+  min: 1,
+  max: 8,
+  length: 6
+}
+
+test("analyzeArray([1, 8, 3, 4, 2, 6]) should return an object that matches testObject", () => {
+  expect(functions.analyzeArray([1, 8, 3, 4, 2, 6])).toMatchObject(testObject);
+})
